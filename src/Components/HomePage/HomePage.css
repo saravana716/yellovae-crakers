@@ -1024,9 +1024,10 @@
         font-weight: 500;
     }
     .innovative p{
-        font-size: 18px;
+        font-size: 16px;
         color: var(--paraColor);
         font-weight: 400;
+        line-height: 30px;
     }
     .choose-us-menus h1{
         color: var(--secondaryTextColor);
