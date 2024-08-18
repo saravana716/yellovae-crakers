@@ -760,7 +760,6 @@
         grid-template-columns: repeat(4,100%);
         padding-top: 60px;
         grid-gap: 30px;
-        background-color: yellow;
         overflow-x: scroll;
         
     }
