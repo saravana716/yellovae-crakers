@@ -890,8 +890,8 @@
         box-shadow: 0 8px 32px 0 gainsboro;
     }
     .service-card-2 .cridiv{
-        width: 400px;
-        height: 400px;
+        width:100%;
+        background-color: #EA1818;
     }
     .cridiv img{
         width: 100%;
