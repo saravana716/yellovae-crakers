@@ -1,0 +1,182 @@
+.Aboutus{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Aboutus1{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Aboutus2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.Aboutus2 h1{
+    font-size: 32px;
+    margin-bottom: 6px;
+    font-family: "Roboto", sans-serif;
+
+}
+.Aboutus2 h1[title]{
+    color: red;
+}
+.AboutCon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5,31.6%);
+    overflow: hidden;
+    overflow-x: scroll;
+    grid-gap: 30px;
+    margin: 50px 0px 30px 0px;
+}
+.AboutCon::-webkit-scrollbar{
+    display: none;
+}
+.Aboutconbox{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+}
+.Aboutconbox h4{
+    margin: 20px 0px;
+    line-height: 25px;
+}
+.aboutname{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.aboutname span{
+   width: 60px;
+   height: 60px;
+    background-color: lightblue;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aboutname span h3{
+    font-size: 25px;
+    margin-bottom: 4px;
+}
+.aboutname1{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.aboutname1 h2{
+    font-size: 16px;
+}
+.star1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+@media screen and (max-width:768px) {
+    .Aboutus{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    
+    }
+    .Aboutus1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .Aboutus2{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .Aboutus2 h1{
+        font-size: 32px;
+        margin-bottom: 6px;
+        font-family: "Roboto", sans-serif;
+    
+    }
+    .Aboutus2 h1[title]{
+        color: red;
+    }
+    .AboutCon{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        display: grid;
+        grid-template-columns: repeat(5,100%);
+        overflow: hidden;
+        overflow-x: scroll;
+        grid-gap: 30px;
+        margin: 50px 0px 30px 0px;
+    }
+    .AboutCon::-webkit-scrollbar{
+        display: none;
+    }
+    .Aboutconbox{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .Aboutconbox h4{
+        margin: 20px 0px;
+        line-height: 25px;
+    }
+    .aboutname{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .aboutname span{
+       width: 60px;
+       height: 60px;
+        background-color: lightblue;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .aboutname span h3{
+        font-size: 25px;
+        margin-bottom: 4px;
+    }
+    .aboutname1{
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutname1 h2{
+        font-size: 16px;
+    }
+    .star1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 6px;
+    }
+}

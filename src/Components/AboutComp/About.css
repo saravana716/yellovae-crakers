@@ -1,0 +1,179 @@
+.AboutUsContainer{
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.AboutUsHeader{
+    font-weight: 400;
+    font-size: 20px;
+    color: #303030;
+    font-family: var(--poppinFont);
+}
+.UnderLine{
+    width: 43px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #EA1818;
+}
+.AboutUsContainer h2{
+    font-weight: 600;
+    font-size: 20px;
+    font-size: 37px;
+    color: #EA1818;
+    font-family: var(--poppinFont);
+    margin-bottom: 10px;
+}
+.AbountContentPara{
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    color: #4D4D4D;
+    line-height: 35px;
+    font-family: var(--poppinFont);
+}
+.OurCommitmentContainer{
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.MenuHedings{
+    font-weight: 600;
+    font-family: var(--poppinFont);
+    color: #EA1818;
+}
+.HeaderSpan{
+    font-weight: 600;
+    font-family: var(--poppinFont);
+    color: #EA1818;
+}
+.OurCommitmentUl li{
+    font-size: 20px;
+    font-family: var(--poppinFont);
+    color: #232323;
+    margin-top: 25px;
+    line-height: 34px;
+    
+}
+.OurCommitmentUl li::marker{
+    color: #EA1818;
+}
+.DeliveryLocations{
+    color: #EA1818;
+}
+.OurCommitmentUl{
+    width: 90%;
+    margin: 0 auto;
+}
+.OurMissionSection{
+    width: 90%;
+    margin: 30px auto;
+}
+.OurMissionHeaderSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+.HeaderSec{
+    width: 90%;
+    margin: 0 auto;
+}
+.OurMissionHeaderSection p{
+    font-size: 22px;
+    color: #000000;
+    font-weight: 500;
+    font-family: var(--poppinFont);
+}
+.OurMissionContents p{
+    font-size: 20px;
+    color: #414141;
+    font-weight: 400;
+    font-family: var(--poppinFont);
+    line-height: 34px;
+    margin-top: 20px;
+}
+.OurMissionContents p span{
+    font-size: 20px;
+    color: #EA1818;
+    font-weight: 600;
+    font-family: var(--poppinFont);
+}
+
+.OurMissionContents{
+    width: 90%;
+    padding-left: 75px;
+}
+.OfferImg{
+    /* / width: 28%; / */
+    background-color: #FDE6E5;
+    border-radius: 50%;
+    height: 380px;
+    margin-top: 20px;
+}
+.OurMissionSecondChild{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.LeftSideChildContainer{
+    width: 100%;
+}
+.OurMissionContainer{
+    width: 100%;
+}
+
+.OurMissionSection2{
+    width: 90%;
+    margin: 30px auto;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Background{
+    background: none;
+}
+.Width{
+    width: 60%;
+}
+.gap{
+    gap: 60px;
+}
+@media(max-width:1200px){
+
+}
+@media(max-width:600px){
+    .OurCommitmentContainer{
+        margin-top: 20px;
+    }
+    .OurMissionSection2{
+        flex-direction: column;
+    }
+    .OurMissionContents{
+        padding-left: 10px;
+    }
+    .AboutUsContainer h2{
+        font-size: 34px;
+    }
+    .OurMissionContents p{
+        width: 110%;
+    }
+    .OurMissionContents p{
+        width: 105%;
+    }
+    .OfferImg{
+        height: 300px;
+    }
+    .Width{
+        width: 100%;
+    }
+    .Background{
+        order: 2;
+    }
+}

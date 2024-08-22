@@ -1,0 +1,119 @@
+.Categories{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    justify-content: center;
+}
+.categories1 h1 span{
+    color: red;
+}
+.Categories2 h2{
+    font-size: 20px;
+}
+.categories1{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.Categories4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Categories2{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.Categories3{
+    width: 200px;
+    height:200px;
+    border-radius: 100%;
+    display: flex;
+}
+.Categories3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+
+}
+.Categories2 h2{
+    margin-top: 20px;
+}
+@media screen and (max-width:768px) {
+    .Categories{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        justify-content: center;
+        padding: 20px;
+    }
+    .categories1 h1 span{
+        color: red;
+    }
+    .Categories2 h2{
+        font-size: 20px;
+    }
+    .categories1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .Categories4{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        grid-template-columns: repeat(5,50%);
+        grid-gap: 20px;
+        overflow: hidden;
+        overflow-x: scroll;
+        margin-top: 30px;
+
+    }
+    .Categories4::-webkit-scrollbar{
+        display: none;
+    }
+    .Categories2{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .Categories3{
+        width:160px;
+        height:160px;
+        border-radius: 100%;
+        display: flex;
+    }
+    .Categories3 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+    
+    }
+    .Categories2 h2{
+        margin-top: 20px;
+    }
+    
+}

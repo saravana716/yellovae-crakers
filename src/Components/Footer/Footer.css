@@ -1,0 +1,363 @@
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer1 {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer2 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footercontent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer2 h2 {
+    font-size: 22px;
+    color: yellow;
+}
+
+.f1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+
+}
+
+.f1 p {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.social h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.social1 {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.social1 p {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 4px 0px 4px 0px;
+}
+
+.social1 a {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 4px 0px 4px 0px;
+    color: white;
+}
+
+.social1 p:hover {
+    color: red;
+    transition: .5s;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.social1 a:hover {
+    color: red;
+    transition: .5s;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.footercontent1 h5 {
+    text-align: center;
+    /* width: 249px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.social1 p .soicon {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.social1 a .soicon {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.f2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+    position: relative;
+
+}
+
+/* .f2::before{ */
+/* position: absolute;
+    content: "";
+    width: 2px;
+    height: 100px;
+    background-color: red;
+    right: 130px;
+    top: 50px;
+} */
+.f3 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-top: 20px;
+    position: relative;
+
+}
+
+.f3 h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.f3 h4 {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 13px;
+    transition: transform .5s linear;
+}
+
+.f2 h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.f2 h4 {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 13px;
+}
+
+.f2 h4:hover {
+    color: red;
+    transition: .3s;
+    transform: translate(10px);
+    cursor: pointer;
+
+}
+
+.footercontent1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border-top: 1px solid white;
+}
+
+@media screen and (max-width:768px) {
+    .footer {
+        width: 100%;
+        height: auto;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer1 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer2 {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footercontent {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .footer2 h2 {
+        font-size: 22px;
+        color: yellow;
+    }
+
+    .f1 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+
+    }
+
+    .f1 p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+
+    .social h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .social1 {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .social1 p {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 4px 0px 4px 0px;
+    }
+
+    .social1 p .soicon {
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .f2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding-left: 0px;
+        margin-top: 20px;
+        position: relative;
+
+    }
+
+    .f2::before {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 100px;
+        background-color: yellow;
+        right: 130px;
+        top: 50px;
+    }
+
+    .f3 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding-left: 0px;
+        margin-top: 20px;
+        position: relative;
+
+    }
+
+    .footer2 h2 {
+        display: none;
+    }
+
+    .f3 h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .f3 h4 {
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 13px;
+    }
+
+    .f2 h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .f2 h4 {
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 13px;
+    }
+
+    .footercontent1 {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        border-top: 1px solid white;
+    }
+}

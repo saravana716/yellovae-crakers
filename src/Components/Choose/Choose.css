@@ -1,0 +1,214 @@
+.Choose{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    margin: 50px 0px;
+}
+.Choose1{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.Choose1 h1{
+    font-size: 32px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 30px;
+}
+.Choose1 h1 span{
+    color: red;
+}
+.Choose2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.choose3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.choose3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.choose4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.choose4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.choosecon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.choosecon img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right: 30px;
+}
+.choosecon1{
+    display: flex;
+    flex-direction: column;
+}
+.choosecon1 h2{
+    font-size: 20px;
+}
+.choosecon1 h3{
+    width: 80%;
+    font-size: 16px;
+    line-height: 25px;
+    margin: 10px 0px;
+    color: gray;
+    font-weight: 600;
+}
+.chimg{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    position: relative;
+    margin-right: 30px;
+}
+.chimg .ch1{
+    width:100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.chimg .ch2{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+}
+@media screen and (max-width:768px){
+    .Choose{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: lightgray;
+        margin: 50px 0px;
+        padding: 20px;
+    }
+    .Choose1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .Choose1 h1{
+        font-size: 32px;
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 30px;
+    }
+    .Choose1 h1 span{
+        color: red;
+    }
+    .Choose2{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .choose3{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .choose3 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .choose4{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .choose4 img{
+        width: 100%;
+        height: 100%;
+        object-fit: con;
+        border-radius: 10px;
+    }
+    .choosecon{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 10px 0px;
+        justify-content: center;
+    }
+    .chimg{
+        width: 100px;
+        height: 60px;
+        display: flex;
+        position: relative;
+    }
+    .chimg .ch1{
+        width:100%;
+        height: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+        margin-right: 30px;
+    }
+    .chimg .ch2{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+    }
+    .choosecon1{
+        display: flex;
+        flex-direction: column;
+    }
+    .choosecon1 h2{
+        font-size: 20px;
+    }
+    .choosecon1 h3{
+        width: 80%;
+        font-size: 16px;
+        line-height: 25px;
+        margin: 10px 0px;
+        color: gray;
+        font-weight: 600;
+    }
+}

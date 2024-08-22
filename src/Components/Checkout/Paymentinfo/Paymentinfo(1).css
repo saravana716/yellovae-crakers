@@ -1,0 +1,279 @@
+.payment1 {
+    width: 95%;
+    height: 100%;
+    display: flex;
+
+}
+
+.payment2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment3 {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.paymentdetails1 h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.payment2 h2 {
+    margin: 20px 0px;
+}
+
+.paymentdetails {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentdetails1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Acc {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+
+}
+
+.Acc h3 {
+    width: 50%;
+    font-size: 16px;
+}
+
+.Acc p {
+    width: 100%;
+}
+
+.Acc p span {
+    margin-right: 30px;
+}
+
+.paymentdetails1 h1 {
+    margin-bottom: 10px;
+}
+
+.paymentdetails1 .scan {
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentdetails1 .scan .scanner {
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+    align-items: center;
+
+}
+
+.scanner {
+    position: relative;
+}
+
+.scanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scanid {
+    width: 100%;
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.scanid h4 {
+    font-size: 15px;
+}
+
+.scanid input {
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.scanid button {
+    padding: 10px 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 25px 0px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.childrengpay {
+    position: absolute;
+    padding: 8px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.childrengpay img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .payment1 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+    }
+
+    .payment2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .payment3 {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .paymentdetails1 h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .payment2 h2 {
+        margin: 20px 0px;
+    }
+
+    .paymentdetails {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .paymentdetails1 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        padding-left: 10px;
+    }
+
+    .Acc {
+        padding: 10px;
+        display: flex;
+        width: 100%;
+
+    }
+
+    .Acc h3 {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .Acc p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .Acc p span {
+        margin-right: 30px;
+    }
+
+    .paymentdetails1 h1 {
+        margin-bottom: 10px;
+    }
+
+    .paymentdetails1 .scan {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .paymentdetails1 .scan .scanner {
+        width: 200px;
+        height: 250px;
+        /* background-color: #EEEEEE; */
+        /* padding: 20px; */
+        display: flex;
+        align-items: center;
+    }
+
+    .scanner {
+        position: relative;
+    }
+
+    .scanner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .scanid {
+        width: 100%;
+        margin: 15px 0px;
+        display: flex;
+        padding: 0px 10px 0px 0px;
+        flex-direction: column;
+    }
+
+    .scanid h4 {
+        font-size: 15px;
+    }
+
+    .scanid input {
+        padding: 10px;
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid gray;
+    }
+
+    .scanid button {
+        width: 100%;
+        padding: 10px 30px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin: 20px 0px;
+    }
+
+    .childrengpay {
+        position: absolute;
+        padding: 8px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .childrengpay img {
+        width: 100%;
+        height: 100%;
+    }
+}

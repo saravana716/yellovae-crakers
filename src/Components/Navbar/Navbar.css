@@ -50,6 +50,9 @@ a{
     font-size: 20px;
 
 }
+a{
+    color: white;
+}
 marquee{
     height: 30px;
     display: flex;
@@ -69,7 +72,7 @@ marquee{
     align-items: center;
     justify-content: space-between;
 }
-.navbarbtn button{
+.navbaricons button{
     padding: 8px 12px;
     border: none;
     color: red;
@@ -83,7 +86,7 @@ marquee{
     border: none;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  background-color: var(--primaryBgColor);
+  background-color:var(--primaryBgColor);
   color: black;
   border-radius: 20px;
 

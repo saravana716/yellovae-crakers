@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../Components/HomePage/HomePage.css'
+import '../../Pages/MyHomepages.css'
 const Card = (props) => {
   return (
     <div className='product-card'>

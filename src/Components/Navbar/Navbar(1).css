@@ -1,0 +1,319 @@
+.navbar{
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0px;
+    font-size: 16px;
+    background-color: black;
+}
+a{
+    list-style: none;
+    color: black;
+    text-decoration: none;
+}
+.navbarlist{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbarlist1{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbarTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbarTitle img{
+    width: 200px;
+    border-radius: 100%;
+}
+.navbarTitle h3{
+    margin-left: 10px;
+    color: orange;
+    font-family: "Roboto", sans-serif;
+}
+    
+.navbarcontent{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ordericons{
+    font-size: 20px;
+
+}
+a{
+    color: white;
+}
+marquee{
+    height: 30px;
+    display: flex;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+}
+.navbaricons{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbarbtn{
+    width: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbaricons button{
+    padding: 8px 12px;
+    border: none;
+    color: red;
+    background-color: transparent;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+
+}
+.navbaricons button{
+    padding: 8px 12px;
+    border: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  background-color:var(--primaryBgColor);
+  color: black;
+  border-radius: 20px;
+
+}
+.navbarbtn button a{
+    color: white;
+}
+.navbarbtn button[title]{
+    background-color: var(--primaryBgColor);
+    color: black;
+    border-radius: 20px;
+}
+ .burgermenu{
+    display: none;
+ }
+ .burgermenu1{
+    display: none;
+ }
+ .navbarcontent h4{
+    line-height: 28px;
+ }
+ 
+ .navbarcontent h4::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    border-radius: 30px;
+    transition: 1s;
+    margin: auto;
+    background-color: var(--primaryBgColor);
+
+ }
+ .navbarcontent h4:hover::after{
+    width: 100%;
+ }
+ .po{
+    position: relative;
+}
+.po span{
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background-color: var(--primaryBgColor);
+    color: black;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+.po12{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.po12 h5{
+    margin-left: 20px;
+}
+@media screen and (max-width:768px) {
+    .navbar{
+        width: 100%;
+        height: 75px;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        padding: 20px;
+        font-size: 16px;
+        background-color:#102447;
+        position: fixed;
+        z-index: 9999;
+        color: #e6e7eb;
+        top: 0;
+        
+    }
+    a{
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+    .burgermenu{
+        display: block;
+        font-size: 25px;
+     }
+     .close{
+        display: none;
+     }
+     .close1{
+        display: none;
+     }
+    .navbarlist{
+        width: 90%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color:#102447;
+        position: absolute;
+        left: -100%;
+        top: 75px;
+
+        z-index: 9999;
+        transition: 1s;
+        padding: 20px;
+        color: #e6e7eb;
+    }
+    .navbarlist1{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .burgermenu1{
+        display: none;
+        font-size: 25px;
+    }
+    .cl{
+        display: block;
+    }
+    .cl1{
+        display: block;
+    }
+    .slider{
+        left: 0;
+    }
+    .navbarTitle{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .navbarTitle img{
+        width: 140px;
+        border-radius: 100%;
+    }
+    .navbarTitle h3{
+        margin-left: 10px;
+        color:#e6e7eb;
+        font-family: "Roboto", sans-serif;
+    }
+    .navbarcontent{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content:flex-start;
+        flex-direction: column;
+    }
+    .ordericons{
+        font-size: 50px;
+        border-radius: 100%;
+        margin-right: 30px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.7s;
+    }
+    .ordericons:hover{
+        background-color: #e6e7eb;
+        color:#102447;
+    }
+    .navbaricons{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 20px 0px;
+    }
+    .navbarbtn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+    .navbarbtn button{
+        padding: 20px;
+        
+        border: none;
+        color: red;
+        background-color: transparent;
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      margin-right: 20px;
+      font-size: 18px;
+    
+    }
+    .navbarbtn button[title]{
+        background-color: red;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .navbarcontent h4{
+        font-size: 18px;
+        margin: 10px 0px;
+    }
+    
+    .po12{
+        width: 100%;
+        margin: 20px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .po12 h5{
+        font-size: 18px;
+        margin-left: -10px;
+    }
+    .po{
+        position: relative;
+    }
+    .po span{
+        position: absolute;
+        top: -10px;
+        left:30px;
+    }
+    marquee{
+        height: 30px;
+        display: flex;
+        font-size: 16px;
+        margin-top: 75px;
+    }
+
+}
