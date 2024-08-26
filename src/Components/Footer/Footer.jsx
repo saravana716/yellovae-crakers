@@ -3,7 +3,7 @@
 import React from "react";
 import { BsInstagram } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
-import logo from "../../Assets/images/cracker logo-03 1.svg";
+import logo from "../../Assets/Screenshot_2024-08-16_214206-removebg.png";
 import "./Footer.css";
 const Footer = () => {
   return (
