@@ -74,13 +74,13 @@ const Paymentinfo = () => {
                 <div className="Acc">
                   <h3>Account Holder Name </h3>
                   <p>
-                    <span>:</span>Sri phoenix cars
+                    <span>:</span>Srigeetha
                   </p>
                 </div>
                 <div className="Acc">
                   <h3>Account Number </h3>
                   <p>
-                    <span>:</span>17310200000741
+                    <span>:</span>17310100024804
                   </p>
                 </div>
 
@@ -93,13 +93,13 @@ const Paymentinfo = () => {
                 <div className="Acc">
                   <h3>Branch </h3>
                   <p>
-                    <span>:</span>SIVAKASI
+                    <span>:</span>Rajapalayam
                   </p>
                 </div>
                 <div className="Acc">
                   <h3>IFSC Code </h3>
                   <p>
-                    <span>:</span>BARB0SIVAKA
+                    <span>:</span>BARB0RAJAPA
                   </p>
                 </div>
                 <div className="Acc">

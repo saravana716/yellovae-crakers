@@ -6,211 +6,189 @@ import Navbar from "../../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
 import "./Listofproducts.css";
 import Marquee from "../../Marquee/Marquee";
-import Carts from "../../../Reusable/Carts/Carts";
-import { allCategory } from "../../../Api/category";
 import { allProduct } from "../../../Api/product";
 import { useDispatch, useSelector } from "react-redux";
 import { storeAction } from "../../../Store/Store";
+import { MdShoppingCartCheckout } from "react-icons/md";
 
 const Listofproducts = () => {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.product);
-  const category = useSelector((state) => state.category);
-  const [allcategorydata, setallcategorydata] = useState([]);
-  const [allproductdata, setallproductdata] = useState([]);
+  const cartdata = useSelector((state) => state.cartdata);
   const [productdata, setproductdata] = useState([]);
-  const [categoryid, setcategoryid] = useState(null);
-  const [type, settype] = useState(null);
+
   useEffect(() => {
     GetallCategory();
   }, []);
   const GetallCategory = async () => {
-    if (category.length !== 0) {
-      setallcategorydata(category);
-      var allcategory = await allCategory();
-      if (allcategory.length !== 0) {
-        setallcategorydata(allcategory);
-        dispatch(storeAction.categoryHandler({ category: allcategory }));
-      }
-    } else {
-      var allcategory = await allCategory();
-      if (allcategory.length !== 0) {
-        setallcategorydata(allcategory);
-        dispatch(storeAction.categoryHandler({ category: allcategory }));
-      }
-    }
     if (product.length !== 0) {
-      // Create a shallow copy of the product array and then sort it
       var finalproduct = [...product].sort(
         (a, b) => a.category.id - b.category.id
       );
-      console.log(finalproduct, "finalproduct");
-
-      // Update state with the sorted product array
-      setallproductdata(finalproduct);
       setproductdata(finalproduct);
-
-      // Fetch all products
       var allproduct = await allProduct();
       if (allproduct.length !== 0) {
-        // Create a shallow copy of the allproduct array and then sort it
         var sortedAllProduct = [...allproduct].sort(
           (a, b) => a.category.id - b.category.id
         );
         dispatch(storeAction.productHandler({ product: sortedAllProduct }));
-        setallproductdata(sortedAllProduct);
         setproductdata(sortedAllProduct);
       }
     } else {
-      // Fetch all products
       var allproduct = await allProduct();
       if (allproduct.length !== 0) {
-        // Create a shallow copy of the allproduct array and then sort it
         var sortedAllProduct = [...allproduct].sort(
           (a, b) => a.category.id - b.category.id
         );
         dispatch(storeAction.productHandler({ product: sortedAllProduct }));
-        setallproductdata(sortedAllProduct);
         setproductdata(sortedAllProduct);
       }
     }
   };
-  const selectcate = async (id) => {
-    var filterdata = await allproductdata.filter((data) => {
-      return data.category.id == id;
-    });
-    setproductdata(filterdata);
-    setcategoryid(id);
-  };
-  const changetype = async (type) => {
-    setproductdata([]);
-    settype(type);
-    if (type == "Price High to Low") {
-      var sortdata = await allproductdata.sort((a, b) => {
-        return b.offer_price - a.offer_price;
+
+  const addtocart = (data, quantity) => {
+    const updatedQuantity = Number(quantity);
+
+    let updatedCart;
+
+    if (updatedQuantity === 0) {
+      updatedCart = cartdata.filter((item) => item.id !== data.id);
+    } else {
+      updatedCart = cartdata.map((item) => {
+        if (item.id === data.id) {
+          return { ...item, quantity: updatedQuantity };
+        }
+        return item;
       });
-      setTimeout(() => {
-        setproductdata(sortdata);
-      }, 1);
-    } else if (type == "Price Low to High") {
-      var sortdata1 = await allproductdata.sort((a, b) => {
-        return a.offer_price - b.offer_price;
-      });
-      setTimeout(() => {
-        setproductdata(sortdata1);
-      }, 1);
+
+      const isProductInCart = cartdata.some((item) => item.id === data.id);
+      if (!isProductInCart) {
+        const newItem = {
+          id: data.id,
+          name: data.name,
+          offer_price: data.offer_price,
+          price: data.price,
+          quantity: updatedQuantity,
+          image: data.image,
+        };
+        updatedCart.push(newItem);
+      }
     }
+
+    dispatch(storeAction.cartdataHandler({ cartdata: updatedCart }));
   };
+
+  const calculateTotals = () => {
+    let netTotal = 0;
+    let totalSavings = 0;
+
+    cartdata.forEach((item) => {
+      netTotal += item.quantity * item.offer_price;
+      totalSavings += item.quantity * (item.price - item.offer_price);
+    });
+
+    const overallTotal = netTotal + totalSavings;
+
+    return {
+      netTotal,
+      totalSavings,
+      overallTotal,
+    };
+  };
+  const { netTotal, totalSavings, overallTotal } = calculateTotals();
+  console.log(cartdata, "cartdata");
   return (
     <>
       <Navbar />
       <Marquee />
-      <div className="List1">
-        <div className="List2">
-          <div className="List3">
-            <div className="Search">
-              <div className="filteroption">
-                <div className="filtersort">
-                  <h2>Product Categories</h2>
-                  <p
-                    className="headingclear"
-                    onClick={() => {
-                      setproductdata(allproductdata);
-                      setcategoryid(null);
-                    }}
-                  >
-                    Clear
-                  </p>
-                </div>
-                <div className="filteroption1">
-                  {allcategorydata.length !== 0
-                    ? allcategorydata.map((data, index) => (
-                        <span
-                          key={index}
-                          onClick={() => {
-                            selectcate(data.id);
-                            settype("");
-                          }}
-                        >
-                          {data.name}
-                          <input
-                            type="radio"
-                            id={data.name}
-                            name={data.name}
-                            value={data.name}
-                            checked={categoryid == data.id}
-                          />
-                        </span>
-                      ))
-                    : null}
-                </div>
-              </div>
-              <div className="filteroption">
-                <div className="filtersort">
-                  <h2>Sort By</h2>
-                  <p
-                    className="headingclear"
-                    onClick={() => {
-                      setproductdata(allproductdata);
-                      settype("");
-                    }}
-                  >
-                    Clear
-                  </p>
-                </div>
-                <div className="filteroption1">
-                  <span
-                    onClick={() => {
-                      changetype("Price High to Low");
-                      selectcate(null);
-                    }}
-                  >
-                    Price High to Low
-                    <input
-                      type="radio"
-                      name="crakers"
-                      checked={type == "Price High to Low"}
-                    />
-                  </span>
-                  <span
-                    onClick={() => {
-                      changetype("Price Low to High");
-                      selectcate(null);
-                    }}
-                  >
-                    Price Low to High
-                    <input
-                      type="radio"
-                      name="crakers"
-                      checked={type == "Price Low to High"}
-                    />
-                  </span>
-                </div>
-              </div>
+      <>
+        <div className="tables">
+          <div className="tableview">
+            <div className="totaldata">
+              <span>
+                <h3>Net Total:</h3>
+                <p>Rs.{netTotal.toLocaleString("en-IN")}</p>
+              </span>
+              <span>
+                <h3>You Save:</h3>
+                <p>Rs.{totalSavings.toLocaleString("en-IN")}</p>
+              </span>
+              <span>
+                <h3>Overall Total:</h3>
+                <p>Rs.{overallTotal.toLocaleString("en-IN")}</p>
+              </span>
+            </div>
+            <div className="po">
+              <MdShoppingCartCheckout className="ordericons" />
+              <span>
+                <p>{cartdata.length}</p>
+              </span>
             </div>
           </div>
-          <div className="List4">
-            <h1>List of Products</h1>
-            <div className="Listpro">
-              <p>
-                Enter the quantity of your required crackers and complete your
-                booking.
-              </p>
-              <h4>
-                Showing Total {productdata.length}
-                {productdata.length == 1 ? " Product" : " Products"}
-              </h4>
-            </div>
-            <div className="listcarts123">
-              {productdata.length !== 0
-                ? productdata.map((item, index) => (
-                    <Carts key={index} item={item} />
-                  ))
-                : null}
-            </div>
+          <table className="product_table">
+            <tr className="table-head-row">
+              <th className="table-head-1">Image</th>
+              <th className="table-head-2">Product Name: </th>
+              <th className="table-head-3">Content: </th>
+              <th className="4">Actual Price </th>
+              <th className="table-head-5">Price </th>
+              <th className="table-head-6">Quantity </th>
+              <th className="table-head-7">Total </th>
+            </tr>
+          </table>
+          <div className="discount-container">
+            <h2>Sparklers (80% Discount)</h2>
           </div>
+          <table className="product_table">
+            {productdata.length !== 0
+              ? productdata.map((data, index) => {
+                  const cartItem = cartdata.find((item) => item.id === data.id);
+                  const quantity = cartItem ? cartItem.quantity : 0;
+
+                  const totalAmount =
+                    quantity !== 0
+                      ? cartItem
+                        ? cartItem.quantity * cartItem.offer_price
+                        : data.offer_price
+                      : 0;
+
+                  return (
+                    <tr className="table-head-row" key={index}>
+                      <td className="table-head-1">
+                        <img className="ordered-img" src={data.image} alt="" />
+                      </td>
+                      <td className="table-head-2">{data.name}</td>
+                      <td className="table-head-3">1 PCS</td>
+                      <td className="4">
+                        <del>
+                          Rs.{Number(data.price).toLocaleString("en-IN")}
+                        </del>
+                      </td>
+                      <td className="table-head-5">
+                        Rs.{Number(data.offer_price).toLocaleString("en-IN")}
+                      </td>
+                      <td className="table-head-6">
+                        <input
+                          className="number-field"
+                          type="number"
+                          value={quantity}
+                          onChange={(e) => addtocart(data, e.target.value)}
+                        />
+                      </td>
+                      <td className="table-head-7">
+                        <input
+                          className="total-btn"
+                          type="button"
+                          value={totalAmount.toLocaleString("en-IN")}
+                        />
+                      </td>
+                    </tr>
+                  );
+                })
+              : null}
+          </table>
         </div>
-      </div>
+      </>
       <Footer />
     </>
   );
