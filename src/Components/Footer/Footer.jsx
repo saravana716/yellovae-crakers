@@ -9,14 +9,15 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer1">
-        <div className="footer2">
-          <h2>Sivakasi Yellovae Crackers</h2>
+        {/* <div className="footer2">
           <div className="navbarTitle">
             <img src={logo} alt="" />
           </div>
-        </div>
+          <h2>Sivakasi Yellovae Crackers</h2>
+        </div> */}
         <div className="footercontent">
           <div className="f1">
+          <img src={logo} alt="" />
             <p>
               In Sivakasi, India, Sivakasi Yellovae Crackers is a leading cracker online
               shopping website and fireworks. We offer the best quality crackers

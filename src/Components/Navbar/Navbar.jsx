@@ -62,7 +62,11 @@ const Navbar = () => {
               <button>Price List</button>
             </div>
             <div className="navbaricons">
-              <button>Price Catlog</button>
+            <Link to="/products">
+                {" "}
+                <button>Quick Order</button>
+              </Link>
+              
             </div>
 
             <div className="po12">

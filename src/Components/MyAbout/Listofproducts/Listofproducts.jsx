@@ -118,12 +118,12 @@ const Listofproducts = () => {
                 <p>Rs.{overallTotal.toLocaleString("en-IN")}</p>
               </span>
             </div>
-            <div className="po">
+            {/* <div className="po">
               <MdShoppingCartCheckout className="ordericons" />
               <span>
                 <p>{cartdata.length}</p>
               </span>
-            </div>
+            </div> */}
           </div>
           <table className="product_table">
             <tr className="table-head-row">

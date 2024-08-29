@@ -212,7 +212,7 @@
     height: 100px;
     background-color: var(--primaryBgColor);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 100px;
 }
