@@ -52,9 +52,9 @@ const ProductTable = () => {
       </div>
       <TableContainer
         component={Paper}
-        style={{ backgroundColor: "#F4F4F4AD", marginBottom: "30px" }}
+        style={{ backgroundColor: "#F4F4F4AD", marginBottom: "30px"}}
       >
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell>Image</TableCell>

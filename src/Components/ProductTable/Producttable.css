@@ -97,6 +97,7 @@
         background: #F4F4F4AD;
         padding: 20px;
         margin-top: 30px;
+        overflow-x: scroll;
 
     }
 
@@ -109,6 +110,11 @@
         font-size: 20px;
         margin-bottom: 10px;
     }
+    .tables{
+        width: 100%;
+        overflow-x: scroll;
+        margin-top: 30px;
+    }
 
     .tablestate1 p {
         font-size: 15px;
@@ -120,6 +126,7 @@
         color: #707070;
 
     }
+    
 
     .timage {
         width: 50px;
@@ -174,4 +181,27 @@
         color: red;
     }
 
+
+.heads{
+    width: 100%;
+}
+.product_table{
+    width: 1000px;
+}
+.tableview{
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.totaldata{
+    width: 100%;
+}
+.discount-container{
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 20px;
+}
 }
