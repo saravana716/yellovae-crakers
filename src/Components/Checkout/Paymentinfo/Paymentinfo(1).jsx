@@ -110,7 +110,7 @@ const Paymentinfo = () => {
                 </div>
               </div>
               <div className="paymentdetails1">
-                <h1>NammaoorCrackersz</h1>
+                <h1>Sivakasi Yellovae Crackers</h1>
                 <div className="scan">
                   <div className="scanner">
                     <img src={gpay} alt="" />
