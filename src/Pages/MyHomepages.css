@@ -734,7 +734,7 @@
     .header-container h1{
         color: var(--secondaryTextColor);
         font-family: var(--popinfont);
-        font-size: 72px;
+        font-size: 50px;
         font-weight: 500;
         text-align: start;
     }

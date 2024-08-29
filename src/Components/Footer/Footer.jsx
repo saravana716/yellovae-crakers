@@ -3,7 +3,7 @@
 import React from "react";
 import { BsInstagram } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
-import logo from "../../Assets/Screenshot_2024-08-16_214206-removebg.png";
+import logo from "../../Assets/12.png";
 import "./Footer.css";
 const Footer = () => {
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footercontent">
           <div className="f1">
             <p>
-              In Sivakasi, India, Yellovae Crackers is a leading cracker online
+              In Sivakasi, India, Sivakasi Yellovae Crackers is a leading cracker online
               shopping website and fireworks. We offer the best quality crackers
               company online all over India at unbeatable pricing.
             </p>
@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footercontent1">
-        <h5>© 2024 -Yellovae Crackers | Designed and Developed by TechBuddy</h5>
+        <h5>© 2024 -Sivakasi Yellovae Crackers | Designed and Developed by TechBuddy</h5>
       </div>
     </div>
   );
