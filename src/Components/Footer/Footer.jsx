@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer1">
         <div className="footer2">
-          <h2>Yellovae Crackers</h2>
+          <h2>Sivakasi Yellovae Crackers</h2>
           <div className="navbarTitle">
             <img src={logo} alt="" />
           </div>
