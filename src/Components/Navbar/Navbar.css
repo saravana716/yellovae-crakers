@@ -79,6 +79,7 @@ marquee{
     background-color: transparent;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
+  cursor: pointer;
 
 }
 .navbaricons button{
@@ -89,6 +90,7 @@ marquee{
   background-color:var(--primaryBgColor);
   color: black;
   border-radius: 20px;
+  cursor: pointer;
 
 }
 .navbarbtn button a{
