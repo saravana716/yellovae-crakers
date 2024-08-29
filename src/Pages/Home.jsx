@@ -39,7 +39,7 @@ const HomePage = () => {
   };
   console.log(singledata, "alldata");
   return (
-    <div>
+    <div className="ch">
       <Navbar />
       <Marquee />
       <Banner />
