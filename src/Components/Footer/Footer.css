@@ -324,6 +324,9 @@
         position: relative;
 
     }
+    .navbarTitle img{
+        width: 200px;
+    }
 
     .footer2 h2 {
         display: none;
