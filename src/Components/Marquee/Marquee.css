@@ -5,12 +5,17 @@ marquee{
     padding: 20px 0px;
     display: flex;
     align-items: center;
+    font-size: 10px;
+    background-color: yellow;
+    color: black;
 }
 @media screen and (max-width:768px){
     marquee{
         height: 30px;
         display: flex;
         font-size: 16px;
+        background-color: aqua;
+        font-weight: 800;
         margin-top: 85px;
     }
 }

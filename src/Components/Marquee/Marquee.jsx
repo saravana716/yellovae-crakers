@@ -38,7 +38,7 @@ const Marquee = () => {
         height="60px"
         background-color="red"
       >
-        <h4>{marqueevalue}</h4>
+        <h1>{marqueevalue}</h1>
       </marquee>
     </>
   );

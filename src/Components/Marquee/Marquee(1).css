@@ -5,6 +5,7 @@ marquee{
     padding: 20px 0px;
     display: flex;
     align-items: center;
+    font-size: 13px;
 }
 @media screen and (max-width:768px){
     marquee{

@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import banner from "../../Assets/Untitled.svg"
-import banner1 from "../../Assets/Untitled (1).svg"
-import banner2 from "../../Assets/Untitled (2).svg"
-import banner3 from "../../Assets/Untitled (3).svg"
+import banner from "../../Assets/u8.jpg"
+import banner1 from "../../Assets/u9.jpg"
+import banner2 from "../../Assets/u10.jpg"
+import banner3 from "../../Assets/u11.jpg"
 import './Banner.css';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 const Banner = () => {
