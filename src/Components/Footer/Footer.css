@@ -51,6 +51,7 @@
 .f1 img{
     height: 120px;
     width: 300px;
+    object-fit: contain;
     margin-bottom: 20px;
 }
 .f1 p {
@@ -333,6 +334,7 @@
     }
     .footer2 .navbarTitle img{
         width: 250px;
+        object-fit: cover;
     }
 
     .footer2 h2 {

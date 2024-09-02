@@ -33,6 +33,7 @@ a{
 }
 .navbarTitle img{
     width: 260px;
+    object-fit: cover;
 }
 .navbarTitle h3{
     margin-left: 10px;

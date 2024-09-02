@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
 import React from "react";
 import { MdShoppingCartCheckout } from "react-icons/md";
-import logo from "../../Assets/12.png";
+import logo from "../../Assets/sa.png";
 import { IoCloseSharp } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
