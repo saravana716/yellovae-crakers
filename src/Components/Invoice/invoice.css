@@ -333,6 +333,14 @@
     }
 
     .TotalBtn {
-        font-size: 12px;
+        font-size: 10px;
+        padding: 5px;
     }
+    .TotalBtn h4{
+        font-size: 18px;
+    }
+    .TotalBtn p{
+        font-size: 18px;
+    }
+   
 }
