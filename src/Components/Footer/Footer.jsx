@@ -63,6 +63,9 @@ const Footer = () => {
             <h4>
               Email: <span>geethasri408@gmail.com</span>
             </h4>
+           <a target="_blank" href="https://www.instagram.com/sivakasiyellovaecrackers.24/?utm_source=ig_web_button_share_sheet"> <h4>
+              Instagram: <span>sivakasiyellovaecrackers.24</span>
+            </h4></a>
             <h4>
               Address :{" "}
               <span>
