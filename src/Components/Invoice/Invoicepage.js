@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./invoice.css";
-import LogoImg from "../../Assets/Screenshot_2024-08-16_214206-removebg.png";
+import LogoImg from "../../Assets/tr.png";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { IoMdMailUnread } from "react-icons/io";
 import { FiDownload } from "react-icons/fi";
