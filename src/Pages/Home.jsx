@@ -24,6 +24,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 import Marquee from "../Components/Marquee/Marquee";
 import { allVideo } from "../Api/video";
+import Category from "../Components/Category/Category";
 const HomePage = () => {
   const [alldata, setalldata] = useState([]);
   const [singledata, setsingledata] = useState(null);
@@ -43,6 +44,12 @@ const HomePage = () => {
       <Navbar />
       <Marquee />
       <Banner />
+    <div className="our-category">
+    <h4>Our Categories</h4>
+      <div className="categorysection">
+      <Category/>
+      </div>
+    </div>
       <section className="top-order-section">
         <div className="header-container">
           <div className="cy">
