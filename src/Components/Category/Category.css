@@ -1,30 +1,35 @@
-.Category_cart{
+.Category_cart {
     height: 300px;
     display: flex;
     flex-direction: column;
-    background-color:#feff9f;
+    background-color: #feff9f;
     align-items: center;
     justify-content: space-between;
 
 }
-.Category_cart h1{
+
+.Category_cart h1 {
     width: 100%;
     padding: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 21px;
-    background-color:#1c94d1;
-    color: white;  
+    background-color: #1c94d1;
+    color: white;
+    cursor: pointer;
 }
-.our-category{
-    width: 100%;
-    padding: 20px;
+
+.our-category {
+    width: 90%;
+    margin: 0 auto;
 }
-.our-category h4{
+
+.our-category h4 {
     font-size: 40px;
 }
-.cate-images{
+
+.cate-images {
     width: 180px;
     height: 180px;
     display: flex;
@@ -32,47 +37,54 @@
     border: 5px solid #1c94d1;
     overflow: hidden;
 }
-.cate-images img{
+
+.cate-images img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    cursor: pointer;
 }
-.Category_cart p{
+
+.Category_cart p {
     width: 100%;
     height: 5px;
-    background-color:#1c94d1;
+    background-color: #1c94d1;
 }
 
 
-@media screen and (max-width:768px){
-    .Category_cart{
+@media screen and (max-width:768px) {
+    .Category_cart {
         width: 100%;
-        height:auto;
+        height: auto;
         display: flex;
         flex-direction: column;
-        background-color:#feff9f;
+        background-color: #feff9f;
         align-items: center;
         justify-content: space-between;
-    
+
     }
-    .Category_cart h1{
+
+    .Category_cart h1 {
         width: 100%;
         padding: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 14px;
-        background-color:#1c94d1;
-        color: white;  
+        background-color: #1c94d1;
+        color: white;
     }
-    .our-category{
+
+    .our-category {
         width: 100%;
         padding: 20px;
     }
-    .our-category h4{
+
+    .our-category h4 {
         font-size: 40px;
     }
-    .cate-images{
+
+    .cate-images {
         width: 100px;
         height: 100px;
         display: flex;
@@ -82,14 +94,16 @@
         margin: 30px 0px;
 
     }
-    .cate-images img{
+
+    .cate-images img {
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
-    .Category_cart p{
+
+    .Category_cart p {
         width: 100%;
         height: 5px;
-        background-color:#1c94d1;
+        background-color: #1c94d1;
     }
 }

@@ -17,11 +17,12 @@ const Footer = () => {
         </div> */}
         <div className="footercontent">
           <div className="f1">
-          <img src={logo} alt="" />
+            <img src={logo} alt="" />
             <p>
-              In Sivakasi, India, Sivakasi Yellovae Crackers is a leading cracker online
-              shopping website and fireworks. We offer the best quality crackers
-              company online all over India at unbeatable pricing.
+              In Sivakasi, India, Sivakasi Yellovae Crackers is a leading
+              cracker online shopping website and fireworks. We offer the best
+              quality crackers company online all over India at unbeatable
+              pricing.
             </p>
             {/* <div className="social">
               <h1>Social Media</h1>
@@ -75,7 +76,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="footercontent1">
-        <h5>© 2024 -Sivakasi Yellovae Crackers | Designed and Developed by TechBuddy</h5>
+        <h5>
+          © 2024 -Sivakasi Yellovae Crackers | Designed and Developed by
+          TechBuddy
+        </h5>
       </div>
     </div>
   );

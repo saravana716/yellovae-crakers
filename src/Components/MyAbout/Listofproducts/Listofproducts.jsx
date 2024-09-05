@@ -9,27 +9,39 @@ import Marquee from "../../Marquee/Marquee";
 import { allProduct } from "../../../Api/product";
 import { useDispatch, useSelector } from "react-redux";
 import { storeAction } from "../../../Store/Store";
-import { MdShoppingCartCheckout } from "react-icons/md";
+import { useParams } from "react-router-dom"; // Import for accessing URL params
 
 const Listofproducts = () => {
   const dispatch = useDispatch();
+  const { categoryId } = useParams(); // Grab the categoryId from the URL
   const product = useSelector((state) => state.product);
   const cartdata = useSelector((state) => state.cartdata);
   const [productdata, setproductdata] = useState([]);
 
   useEffect(() => {
     GetallCategory();
-  }, []);
+  }, [categoryId]); // Re-run when categoryId changes
+
   const GetallCategory = async () => {
     if (product.length !== 0) {
-      var finalproduct = [...product].sort(
-        (a, b) => a.category.id - b.category.id
+      let filteredProduct = categoryId
+        ? product.filter(
+            (item) => item.category && item.category.id == categoryId
+          )
+        : product;
+      var finalproduct = [...filteredProduct].sort(
+        (a, b) => a.category !== undefined && a.category.id - b.category.id
       );
       setproductdata(finalproduct);
       var allproduct = await allProduct();
       if (allproduct.length !== 0) {
-        var sortedAllProduct = [...allproduct].sort(
-          (a, b) => a.category.id - b.category.id
+        let filteredProduct = categoryId
+          ? allproduct.filter(
+              (item) => item.category && item.category.id == categoryId
+            )
+          : allproduct;
+        var sortedAllProduct = [...filteredProduct].sort(
+          (a, b) => a.category !== undefined && a.category.id - b.category.id
         );
         dispatch(storeAction.productHandler({ product: sortedAllProduct }));
         setproductdata(sortedAllProduct);
@@ -37,8 +49,13 @@ const Listofproducts = () => {
     } else {
       var allproduct = await allProduct();
       if (allproduct.length !== 0) {
-        var sortedAllProduct = [...allproduct].sort(
-          (a, b) => a.category.id - b.category.id
+        let filteredProduct = categoryId
+          ? allproduct.filter(
+              (item) => item.category && item.category.id == categoryId
+            )
+          : allproduct;
+        var sortedAllProduct = [...filteredProduct].sort(
+          (a, b) => a.category !== undefined && a.category.id - b.category.id
         );
         dispatch(storeAction.productHandler({ product: sortedAllProduct }));
         setproductdata(sortedAllProduct);
@@ -48,7 +65,6 @@ const Listofproducts = () => {
 
   const addtocart = (data, quantity) => {
     const updatedQuantity = Number(quantity);
-
     let updatedCart;
 
     if (updatedQuantity === 0) {
@@ -95,8 +111,9 @@ const Listofproducts = () => {
       overallTotal,
     };
   };
+
   const { netTotal, totalSavings, overallTotal } = calculateTotals();
-  console.log(cartdata, "cartdata");
+
   return (
     <>
       <Navbar />
@@ -118,13 +135,8 @@ const Listofproducts = () => {
                 <p>Rs.{overallTotal.toLocaleString("en-IN")}</p>
               </span>
             </div>
-            {/* <div className="po">
-              <MdShoppingCartCheckout className="ordericons" />
-              <span>
-                <p>{cartdata.length}</p>
-              </span>
-            </div> */}
           </div>
+
           <table className="product_table">
             <tr className="table-head-row">
               <th className="table-head-1">Image</th>
@@ -136,9 +148,11 @@ const Listofproducts = () => {
               <th className="table-head-7">Total </th>
             </tr>
           </table>
+
           <div className="discount-container">
             <h2>Sparklers (80% Discount)</h2>
           </div>
+
           <table className="product_table">
             {productdata.length !== 0
               ? productdata.map((data, index) => {

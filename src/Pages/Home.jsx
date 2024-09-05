@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useEffect, useState } from "react";
 import "./MyHomepages.css";
@@ -44,12 +45,12 @@ const HomePage = () => {
       <Navbar />
       <Marquee />
       <Banner />
-    <div className="our-category">
-    <h4>Our Categories</h4>
-      <div className="categorysection">
-      <Category/>
+      <div className="our-category">
+        <h4>Our Categories</h4>
+        <div className="categorysection">
+          <Category />
+        </div>
       </div>
-    </div>
       <section className="top-order-section">
         <div className="header-container">
           <div className="cy">
@@ -318,7 +319,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <div className="videosection">
+      {/* <div className="videosection">
         <div className="videosec">
           {singledata !== null ? (
             <div className="videosecleft">
@@ -351,7 +352,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="botfot">
         <img className="diwali-img" src={DiwaliImg} alt="" />
       </div>{" "}
