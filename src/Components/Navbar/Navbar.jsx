@@ -27,7 +27,12 @@ const Navbar = () => {
     geticon.classList.remove("close");
     geticon1.classList.remove("cl");
   }
-
+  const handleDownload = () => {
+    window.open(
+      "https://firebasestorage.googleapis.com/v0/b/first-1a905.appspot.com/o/yellow%20crackers.pdf?alt=media&token=26e2c379-f1db-4247-abb8-ed7cb7ac16ea",
+      "_blank"
+    );
+  };
   return (
     <>
       <div className="navbar">
@@ -59,14 +64,13 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="navbaricons">
-              <button>Price List</button>
+              <button onClick={handleDownload}>Price List</button>
             </div>
             <div className="navbaricons">
-            <Link to="/products">
+              <Link to="/products">
                 {" "}
                 <button>Quick Order</button>
               </Link>
-              
             </div>
 
             <div className="po12">
