@@ -319,7 +319,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      {/* <div className="videosection">
+
+<div className="videosection">
         <div className="videosec">
           {singledata !== null ? (
             <div className="videosecleft">
@@ -352,7 +353,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       <div className="botfot">
         <img className="diwali-img" src={DiwaliImg} alt="" />
       </div>{" "}
