@@ -172,7 +172,7 @@ const Listofproducts = () => {
                         <img className="ordered-img" src={data.image} alt="" />
                       </td>
                       <td className="table-head-2">{data.name}</td>
-                      <td className="table-head-3">1 PCS</td>
+                      <td className="table-head-3">1 BOX</td>
                       <td className="4">
                         <del>
                           Rs.{Number(data.price).toLocaleString("en-IN")}
