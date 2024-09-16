@@ -22,7 +22,7 @@ const Contact = () => {
             <span>Office: </span>+91 7904202470
           </p>
           <h1 className="ContactSubHeading">Email Address</h1>
-          <p>geethasri408@gmail.com</p>
+          <p>Sivakasiyellovaecracker@gmail.com</p>
           <h1 className="ContactSubHeading">Opening Time</h1>
           <p>Monday – Sunday: 9am – 8pm</p>
         </div>
