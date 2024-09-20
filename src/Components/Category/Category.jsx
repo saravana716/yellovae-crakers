@@ -24,7 +24,7 @@ const Category = () => {
               className="Category_cart"
               key={index}
               onClick={() => {
-                selectCategory(data.id);
+                selectCategory(data._id);
               }}
             >
               <h1>{data.name}</h1>

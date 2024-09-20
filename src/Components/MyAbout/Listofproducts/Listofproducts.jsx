@@ -24,38 +24,40 @@ const Listofproducts = () => {
 
   const GetallCategory = async () => {
     if (product.length !== 0) {
+      console.log(categoryId, "categoryId", product);
       let filteredProduct = categoryId
         ? product.filter(
-            (item) => item.category && item.category.id == categoryId
+            (item) => item.category && item.category._id == categoryId
           )
         : product;
       var finalproduct = [...filteredProduct].sort(
-        (a, b) => a.category !== undefined && a.category.id - b.category.id
+        (a, b) => a.category !== undefined && a.category._id - b.category._id
       );
       setproductdata(finalproduct);
       var allproduct = await allProduct();
       if (allproduct.length !== 0) {
         let filteredProduct = categoryId
           ? allproduct.filter(
-              (item) => item.category && item.category.id == categoryId
+              (item) => item.category && item.category._id == categoryId
             )
           : allproduct;
         var sortedAllProduct = [...filteredProduct].sort(
-          (a, b) => a.category !== undefined && a.category.id - b.category.id
+          (a, b) => a.category !== undefined && a.category._id - b.category._id
         );
         dispatch(storeAction.productHandler({ product: sortedAllProduct }));
         setproductdata(sortedAllProduct);
       }
     } else {
       var allproduct = await allProduct();
+      console.log(categoryId, "categoryId", allproduct);
       if (allproduct.length !== 0) {
         let filteredProduct = categoryId
           ? allproduct.filter(
-              (item) => item.category && item.category.id == categoryId
+              (item) => item.category && item.category._id == categoryId
             )
           : allproduct;
         var sortedAllProduct = [...filteredProduct].sort(
-          (a, b) => a.category !== undefined && a.category.id - b.category.id
+          (a, b) => a.category !== undefined && a.category._id - b.category._id
         );
         dispatch(storeAction.productHandler({ product: sortedAllProduct }));
         setproductdata(sortedAllProduct);

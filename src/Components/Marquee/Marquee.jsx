@@ -17,16 +17,16 @@ const Marquee = () => {
   const Getalldata = async () => {
     if (marquee.length !== 0) {
       setmarqueevalue(marquee);
-      var data = await MarqueeviewByid({ id: 1 });
+      var data = await MarqueeviewByid({ id: "66ed61900f7e68e2099758f2" });
       if (data.length !== 0) {
-        setmarqueevalue(data[0].marquee);
-        dispatch(storeAction.marqueeHandler({ marquee: data[0].marquee }));
+        setmarqueevalue(data.data.marquee);
+        dispatch(storeAction.marqueeHandler({ marquee: data.data.marquee }));
       }
     } else {
-      var data = await MarqueeviewByid({ id: 1 });
+      var data = await MarqueeviewByid({ id: "66ed61900f7e68e2099758f2" });
       if (data.length !== 0) {
-        dispatch(storeAction.marqueeHandler({ marquee: data[0].marquee }));
-        setmarqueevalue(data[0].marquee);
+        dispatch(storeAction.marqueeHandler({ marquee: data.data.marquee }));
+        setmarqueevalue(data.data.marquee);
       }
     }
   };
