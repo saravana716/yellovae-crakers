@@ -24,7 +24,6 @@ const Listofproducts = () => {
 
   const GetallCategory = async () => {
     if (product.length !== 0) {
-      console.log(categoryId, "categoryId", product);
       let filteredProduct = categoryId
         ? product.filter(
             (item) => item.category && item.category._id == categoryId
@@ -49,7 +48,6 @@ const Listofproducts = () => {
       }
     } else {
       var allproduct = await allProduct();
-      console.log(categoryId, "categoryId", allproduct);
       if (allproduct.length !== 0) {
         let filteredProduct = categoryId
           ? allproduct.filter(

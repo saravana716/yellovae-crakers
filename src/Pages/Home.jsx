@@ -39,7 +39,6 @@ const HomePage = () => {
       setalldata(alldata);
     }
   };
-  console.log(singledata, "alldata");
   return (
     <div className="ch">
       <Navbar />
