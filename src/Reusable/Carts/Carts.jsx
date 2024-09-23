@@ -7,14 +7,14 @@ const Carts = ({ item }) => {
   const dispatch = useDispatch();
   const cartdata = useSelector((state) => state.cartdata);
 
-  const isInCart = cartdata.some((cartItem) => cartItem.id === item.id);
+  const isInCart = cartdata.some((cartItem) => cartItem._id === item._id);
   const cartItem = isInCart
-    ? cartdata.find((cartItem) => cartItem.id === item.id)
+    ? cartdata.find((cartItem) => cartItem._id === item._id)
     : null;
 
   const addtocart = async (data) => {
     const newItem = {
-      id: data.id,
+      offer_priceid: data._id,
       name: data.name,
       offer_price: data.offer_price,
       price: data.price,
@@ -26,13 +26,13 @@ const Carts = ({ item }) => {
   };
 
   const removeFromCart = (productId) => {
-    const updatedCartdata = cartdata.filter((item) => item.id !== productId);
+    const updatedCartdata = cartdata.filter((item) => item._id !== productId);
     dispatch(storeAction.cartdataHandler({ cartdata: updatedCartdata }));
   };
 
   const decreaseQuantity = (productId) => {
     const updatedCartdata = cartdata.map((item) => {
-      if (item.id === productId && item.quantity > 1) {
+      if (item._id === productId && item.quantity > 1) {
         return { ...item, quantity: item.quantity - 1 };
       }
       return item;
@@ -43,7 +43,7 @@ const Carts = ({ item }) => {
 
   const increaseQuantity = (productId) => {
     const updatedCartdata = cartdata.map((item) => {
-      if (item.id === productId) {
+      if (item._id === productId) {
         return { ...item, quantity: item.quantity + 1 };
       }
       return item;
@@ -75,9 +75,9 @@ const Carts = ({ item }) => {
             {isInCart && (
               <div className="cartqty">
                 <div className="incre">
-                  <p onClick={() => decreaseQuantity(item.id)}>-</p>
+                  <p onClick={() => decreaseQuantity(item._id)}>-</p>
                   <p>{cartItem.quantity}</p>
-                  <p onClick={() => increaseQuantity(item.id)}>+</p>
+                  <p onClick={() => increaseQuantity(item._id)}>+</p>
                 </div>
               </div>
             )}
@@ -88,7 +88,7 @@ const Carts = ({ item }) => {
         <button onClick={() => addtocart(item)}>Add to Cart</button>
       )}
       {isInCart && (
-        <button onClick={() => removeFromCart(item.id)}>
+        <button onClick={() => removeFromCart(item._id)}>
           Remove from Cart
         </button>
       )}

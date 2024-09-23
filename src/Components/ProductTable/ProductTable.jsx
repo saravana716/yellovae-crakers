@@ -18,7 +18,7 @@ const ProductTable = () => {
 
   const decreaseQuantity = (productId) => {
     const updatedCartdata = cartdata.map((item) => {
-      if (item.id === productId && item.quantity > 1) {
+      if (item._id === productId && item.quantity > 1) {
         return { ...item, quantity: item.quantity - 1 };
       }
       return item;
@@ -29,7 +29,7 @@ const ProductTable = () => {
 
   const increaseQuantity = (productId) => {
     const updatedCartdata = cartdata.map((item) => {
-      if (item.id === productId) {
+      if (item._id === productId) {
         return { ...item, quantity: item.quantity + 1 };
       }
       return item;
@@ -38,7 +38,7 @@ const ProductTable = () => {
     dispatch(storeAction.cartdataHandler({ cartdata: updatedCartdata }));
   };
   const removeFromCart = (productId) => {
-    const updatedCartdata = cartdata.filter((item) => item.id !== productId);
+    const updatedCartdata = cartdata.filter((item) => item._id !== productId);
     dispatch(storeAction.cartdataHandler({ cartdata: updatedCartdata }));
   };
   return (
@@ -81,9 +81,9 @@ const ProductTable = () => {
                     <TableCell>
                       <div className="cartqty1">
                         <div className="incre1">
-                          <p onClick={() => decreaseQuantity(data.id)}>-</p>
+                          <p onClick={() => decreaseQuantity(data._id)}>-</p>
                           <p>{data.quantity}</p>
-                          <p onClick={() => increaseQuantity(data.id)}>+</p>
+                          <p onClick={() => increaseQuantity(data._id)}>+</p>
                         </div>
                       </div>
                     </TableCell>
@@ -97,7 +97,7 @@ const ProductTable = () => {
                       <MdDeleteOutline
                         className="remove"
                         onClick={() => {
-                          removeFromCart(data.id);
+                          removeFromCart(data._id);
                         }}
                       />
                     </TableCell>

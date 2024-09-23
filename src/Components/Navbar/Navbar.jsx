@@ -29,7 +29,7 @@ const Navbar = () => {
   }
   const handleDownload = () => {
     window.open(
-      "https://firebasestorage.googleapis.com/v0/b/first-1a905.appspot.com/o/yellow%20crackers.pdf?alt=media&token=26e2c379-f1db-4247-abb8-ed7cb7ac16ea",
+      "https://firebasestorage.googleapis.com/v0/b/first-1a905.appspot.com/o/yellove%2024%20price%20list%20(1).pdf?alt=media&token=ed150f79-f362-4477-84e0-64932f32057f",
       "_blank"
     );
   };

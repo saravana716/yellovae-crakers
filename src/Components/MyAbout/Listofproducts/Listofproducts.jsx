@@ -68,19 +68,19 @@ const Listofproducts = () => {
     let updatedCart;
 
     if (updatedQuantity === 0) {
-      updatedCart = cartdata.filter((item) => item.id !== data.id);
+      updatedCart = cartdata.filter((item) => item._id !== data._id);
     } else {
       updatedCart = cartdata.map((item) => {
-        if (item.id === data.id) {
+        if (item._id === data._id) {
           return { ...item, quantity: updatedQuantity };
         }
         return item;
       });
 
-      const isProductInCart = cartdata.some((item) => item.id === data.id);
+      const isProductInCart = cartdata.some((item) => item._id === data._id);
       if (!isProductInCart) {
         const newItem = {
-          id: data.id,
+          _id: data._id,
           name: data.name,
           offer_price: data.offer_price,
           price: data.price,
@@ -156,7 +156,7 @@ const Listofproducts = () => {
           <table className="product_table">
             {productdata.length !== 0
               ? productdata.map((data, index) => {
-                  const cartItem = cartdata.find((item) => item.id === data.id);
+                  const cartItem = cartdata.find((item) => item._id === data._id);
                   const quantity = cartItem ? cartItem.quantity : 0;
 
                   const totalAmount =
