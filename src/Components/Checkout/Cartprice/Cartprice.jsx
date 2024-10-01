@@ -9,7 +9,7 @@ const Cartprice = () => {
   const navigate = useNavigate();
   const checkout = async () => {
     seterror(false);
-    if (totalPrice >= 2000) {
+    if (totalPrice >= 3000) {
       navigate("/checkout");
     } else {
       seterror(true);
@@ -50,7 +50,7 @@ const Cartprice = () => {
           <h4>&#8377; {Number(totalPrice).toLocaleString("en-IN")}</h4>
         </div>
         {error && (
-          <p className="erromsg">Minimumorder order value must ₹ 2000 /-</p>
+          <p className="erromsg">Minimumorder order value must ₹ 3000 /-</p>
         )}
         <button className="checkoutbtn" onClick={checkout}>
           Continue
