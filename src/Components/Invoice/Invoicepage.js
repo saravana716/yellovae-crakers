@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+/* eslint-disable eqeqeq */
+import React, { useRef, useState } from "react";
 import "./invoice.css";
 import LogoImg from "../../Assets/tr.png";
 import { FaPhoneSquareAlt } from "react-icons/fa";
@@ -19,6 +20,7 @@ const Invoicepage = () => {
   const cartdata = useSelector((state) => state.cartdata);
   const orderid = useSelector((state) => state.orderid);
   const userdata = useSelector((state) => state.userdata);
+  const [loading, setloading] = useState(false);
 
   const totalPrice = cartdata.reduce((total, cartItem) => {
     return total + cartItem.offer_price * cartItem.quantity;
@@ -27,18 +29,52 @@ const Invoicepage = () => {
   const discountPrice = cartdata.reduce((total, cartItem) => {
     return total + cartItem.price * cartItem.quantity;
   }, 0);
+
   const downloadPdf = () => {
+    setloading(true);
     const input = invoiceRef.current;
-    html2canvas(input, { scale: 2 }).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
+    html2canvas(input, { scale: 1.5 }).then((canvas) => {
+      // Reduced scale to 1.5
       const pdf = new jsPDF("p", "mm", "a4");
-      const imgProps = pdf.getImageProperties(imgData);
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-      pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+
+      const imgWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+      let heightLeft = imgHeight;
+      let position = 10; // Start 10mm from the top for padding
+
+      // Render the first page with padding
+      pdf.addImage(
+        canvas.toDataURL("image/png", 0.7), // Set compression to 70% for smaller file size
+        "PNG",
+        0,
+        position,
+        imgWidth,
+        imgHeight - 20 // Subtract padding (10mm top and 10mm bottom)
+      );
+      heightLeft -= pageHeight;
+
+      // Render the remaining pages with padding
+      while (heightLeft > 0) {
+        position = heightLeft - imgHeight + 10; // Add 10mm padding at the top
+        pdf.addPage();
+        pdf.addImage(
+          canvas.toDataURL("image/png", 0.7),
+          "PNG",
+          0,
+          position,
+          imgWidth,
+          imgHeight - 20 // Subtract padding for remaining pages as well
+        );
+        heightLeft -= pageHeight;
+      }
+
+      setloading(false);
       pdf.save(`${orderid.order_id}_invoice.pdf`);
     });
   };
+
   const backbtn = () => {
     dispatch(storeAction.cartdataHandler({ cartdata: [] }));
     dispatch(storeAction.userdataHandler({ userdata: null }));
@@ -52,9 +88,14 @@ const Invoicepage = () => {
       <div className="ThankingContainer">
         <h1 className="Header">Order Placed Successfully</h1>
         <div className="Buttongrp">
-          <button className="DwldButton" onClick={downloadPdf}>
-            Download Invoice <FiDownload className="DwldIc" />
-          </button>
+          {loading == true ? (
+            <button className="DwldButton">Please Wait...</button>
+          ) : (
+            <button className="DwldButton" onClick={downloadPdf}>
+              Download Invoice <FiDownload className="DwldIc" />
+            </button>
+          )}
+
           <button className="backButton" onClick={backbtn}>
             <IoArrowBackOutline className="DwldIc" /> Back to Home
           </button>
