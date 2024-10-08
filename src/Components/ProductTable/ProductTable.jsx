@@ -46,7 +46,7 @@ const ProductTable = () => {
       <div className="tablestate">
         <div className="tablestate1">
           <h1>My Cart</h1>
-          <p>Minimumorder value is &#8377; 3000</p>
+          <p>Minimumorder value is &#8377; 2500</p>
         </div>
         <h5>Showing of {cartdata.length} carted items</h5>
       </div>
