@@ -162,6 +162,7 @@ const Invoicepage = () => {
         <table className="MainTable">
           <thead>
             <tr className="MainTableHeaderRow">
+              <th>S.No</th>
               <th>DESCRIPTION</th>
               <th>PRICE</th>
               <th>OFFER PRICE</th>
@@ -173,6 +174,7 @@ const Invoicepage = () => {
             {cartdata.length !== 0
               ? cartdata.map((data, index) => (
                   <tr className="MainTableRow" key={index}>
+                    <td>{index+1}</td>
                     <td>{data.name}</td>
                     <td>
                       <del>

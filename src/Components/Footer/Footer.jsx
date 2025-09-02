@@ -63,13 +63,20 @@ const Footer = () => {
             <h4>
               Email: <span>Sivakasiyellovaecracker@gmail.com</span>
             </h4>
-           <a target="_blank" href="https://www.instagram.com/sivakasiyellovaecrackers.24/?utm_source=ig_web_button_share_sheet"> <h4>
-              Instagram: <span>sivakasiyellovaecrackers.24</span>
-            </h4></a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/sivakasiyellovaecrackers.24/?utm_source=ig_web_button_share_sheet"
+            >
+              {" "}
+              <h4>
+                Instagram: <span>sivakasiyellovaecrackers.24</span>
+              </h4>
+            </a>
             <h4>
               Address :{" "}
               <span>
-                No 128-56 veedu colony, Pudhur road, Sivakasi east, 626189
+                Glory Traders, No 128-56 veedu colony, Pudhur road, Sivakasi
+                east, 626189
               </span>
             </h4>
             <h4>
@@ -80,8 +87,8 @@ const Footer = () => {
       </div>
       <div className="footercontent1">
         <h5>
-          © 2024 -Sivakasi Yellovae Crackers | Designed and Developed by
-          TechBuddy
+          © 2025 - Sivakasi Yellovae Crackers | Designed and Developed by
+          Zenspark Digital
         </h5>
       </div>
     </div>
