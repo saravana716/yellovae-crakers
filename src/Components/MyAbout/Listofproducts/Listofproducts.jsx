@@ -150,7 +150,7 @@ const Listofproducts = () => {
           </table>
 
           <div className="discount-container">
-            <h2>65% Discount</h2>
+            <h2>75% Discount</h2>
           </div>
 
           <table className="product_table">
