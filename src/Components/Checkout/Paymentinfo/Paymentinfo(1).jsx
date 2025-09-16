@@ -74,13 +74,13 @@ const Paymentinfo = () => {
                 <div className="Acc">
                   <h3>Account Holder Name </h3>
                   <p>
-                    <span>:</span>LUCKY STAR AGENCIES
+                    <span>:</span>N. Srigeetha
                   </p>
                 </div>
                 <div className="Acc">
                   <h3>Account Number </h3>
                   <p>
-                    <span>:</span>1261280000000920
+                    <span>:</span>1804210004500
                   </p>
                 </div>
 
@@ -99,13 +99,13 @@ const Paymentinfo = () => {
                 <div className="Acc">
                   <h3>IFSC Code </h3>
                   <p>
-                    <span>:</span>KVBL0001261
+                    <span>:</span>1804210004500
                   </p>
                 </div>
                 <div className="Acc">
                   <h3>UPI ID </h3>
                   <p>
-                    <span>:</span>hhi050844@okaxis
+                    <span>:</span>srigeetha@ucobank
                   </p>
                 </div>
               </div>

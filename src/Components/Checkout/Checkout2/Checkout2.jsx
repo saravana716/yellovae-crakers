@@ -39,13 +39,14 @@ const Checkout2 = () => {
       state: false,
       pincode: false,
     });
-    if (formdata.name.length == 0) {
+    console.log(formdata, "formdata");
+    if ((formdata.name || "").length === 0) {
       setformdataerror((values) => ({ ...values, name: true }));
-    } else if (formdata.phone.length == 0) {
+    } else if ((formdata.phone || "").length === 0) {
       setformdataerror((values) => ({ ...values, phone: true }));
-    } else if (formdata.address.length == 0) {
+    } else if ((formdata.address || "").length === 0) {
       setformdataerror((values) => ({ ...values, address: true }));
-    } else if (formdata.state.length == 0) {
+    } else if ((formdata.state || "").length === 0) {
       setformdataerror((values) => ({ ...values, state: true }));
     } else {
       setformdataerror({

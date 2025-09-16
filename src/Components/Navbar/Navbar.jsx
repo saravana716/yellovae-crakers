@@ -29,7 +29,7 @@ const Navbar = () => {
   }
   const handleDownload = () => {
     window.open(
-      "https://firebasestorage.googleapis.com/v0/b/first-1a905.appspot.com/o/yellovae%20price%20list%202025.pdf?alt=media&token=c9a0d838-942f-487a-a097-994026c16599",
+      "https://firebasestorage.googleapis.com/v0/b/first-1a905.appspot.com/o/yellovae%20price%20list%202025%20(1).pdf?alt=media&token=d97a2d07-133e-4f14-aa50-4f385a378d50",
       "_blank"
     );
   };

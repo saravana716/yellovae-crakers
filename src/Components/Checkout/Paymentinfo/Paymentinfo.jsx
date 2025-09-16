@@ -1,7 +1,7 @@
 /* eslint-disable eqeqeq */
 import React, { useState } from "react";
 import "./Paymentinfo.css";
-import gpay from "../../../Assets/images/qrcode.jpg";
+import gpay from "../../../Assets/images/newqr.png";
 import { useDispatch, useSelector } from "react-redux";
 import { storeAction } from "../../../Store/Store";
 import { createOrder } from "../../../Api/order";
@@ -74,13 +74,13 @@ const Paymentinfo = () => {
                 <div className="Acc">
                   <h3>Account Holder Name </h3>
                   <p>
-                    <span>:</span>Srigeetha
+                    <span>:</span>N. Srigeetha
                   </p>
                 </div>
                 <div className="Acc">
                   <h3>Account Number </h3>
                   <p>
-                    <span>:</span>17310100024804
+                    <span>:</span>1804210004500
                   </p>
                 </div>
 
@@ -93,19 +93,19 @@ const Paymentinfo = () => {
                 <div className="Acc">
                   <h3>Branch </h3>
                   <p>
-                    <span>:</span>Rajapalayam
+                    <span>:</span>Sivakasi
                   </p>
                 </div>
                 <div className="Acc">
                   <h3>IFSC Code </h3>
                   <p>
-                    <span>:</span>BARB0RAJAPA
+                    <span>:</span>1804210004500
                   </p>
                 </div>
                 <div className="Acc">
                   <h3>UPI ID </h3>
                   <p>
-                    <span>:</span>geethasri408-2@okaxis
+                    <span>:</span>srigeetha@ucobank
                   </p>
                 </div>
               </div>
