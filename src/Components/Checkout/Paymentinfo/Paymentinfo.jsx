@@ -99,7 +99,7 @@ const Paymentinfo = () => {
                 <div className="Acc">
                   <h3>IFSC Code </h3>
                   <p>
-                    <span>:</span>1804210004500
+                    <span>:</span>UCBA0001804
                   </p>
                 </div>
                 <div className="Acc">
