@@ -100,6 +100,30 @@
     flex-direction: column;
 }
 
+.order-closed-banner {
+    background: #ffefc2;
+    color: #8b0000;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    border: 2px solid #f5c542;
+    max-width: 90%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-closed-banner h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.order-closed-banner p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #5a0000;
+}
+
+
 .filtersort {
     width: 100%;
     display: flex;
@@ -245,7 +269,7 @@ table {
     text-align: center;
     padding: 5px;
 
-    
+
     margin-bottom: 20px;
 }
 
