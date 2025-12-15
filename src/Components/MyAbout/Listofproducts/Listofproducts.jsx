@@ -126,14 +126,14 @@ const Listofproducts = () => {
       <Marquee />
 
       {/* 🎇 Online Order Closed Notice */}
-      <div className="order-closed-banner">
+      {/* <div className="order-closed-banner">
         <h2>🎆 Online Orders Closed for 2025 Season 🎆</h2>
         <p>
           Thank you for your overwhelming support this year! Our online ordering
           is now closed. We’ll reopen next season with exciting new collections
           and festive offers.
         </p>
-      </div>
+      </div> */}
 
       <div className="tables">
         {/* Totals Section */}
@@ -208,7 +208,7 @@ const Listofproducts = () => {
                         min="0"
                         value={quantity}
                         onChange={(e) => addToCart(data, e.target.value)}
-                        disabled
+                        // disabled
                       />
                     </td>
                     <td>
@@ -216,7 +216,7 @@ const Listofproducts = () => {
                         className="total-btn"
                         type="button"
                         value={totalAmount.toLocaleString("en-IN")}
-                        disabled
+                        // disabled
                       />
                     </td>
                   </tr>
